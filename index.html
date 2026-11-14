@@ -1,0 +1,291 @@
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Андрей Попов, финансовый руководитель. Проектное финансирование, управленческий учёт, казначейство и автоматизация финансовых процессов для групп компаний.">
+<title>Андрей Попов — финансовый руководитель</title>
+<style>
+  /* Палитра и основные отступы */
+  :root {
+    --navy: #142b42;
+    --canvas: #f7f9fa;
+    --white: #fff;
+    --teal: #78a9a8;
+    --gold: #d2a86e;
+    --text: #263746;
+    --muted: #586a79;
+    --line: #e2e8ec;
+    --pad: clamp(20px, 4.5vw, 56px);
+    --section: clamp(32px, 4vw, 52px);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--text);
+    font: 15px/1.55 "Segoe UI", Arial, sans-serif;
+  }
+  [hidden] { display: none !important; }
+  h1, h2, h3, p, dl, dd, ul { margin: 0; }
+  h1, h2, h3 { line-height: 1.17; }
+  h2 { color: var(--navy); font-size: 22px; }
+  h3 { color: var(--navy); font-size: 17px; }
+  p + p { margin-top: 9px; }
+  svg { flex: none; width: 22px; height: 22px; }
+  a { color: inherit; text-underline-offset: .2em; }
+  :focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+  .sheet { width: min(calc(100% - 48px), 1240px); margin: clamp(24px, 4vw, 56px) auto; }
+  .hero {
+    position: relative;
+    background: var(--navy);
+    color: var(--white);
+    border-top: 4px solid var(--teal);
+    padding: var(--pad);
+    border-radius: 12px 12px 0 0;
+  }
+  .hero-top { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
+  h1 { font-size: clamp(40px, 5vw, 52px); letter-spacing: -.045em; }
+  .role { margin-top: 4px; font-size: clamp(22px, 2.5vw, 28px); font-weight: 500; }
+  .specialties {
+    color: #daecec;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px 12px;
+    margin: 19px 0 14px;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .specialties li { display: flex; align-items: center; gap: 8px; }
+  .specialties li::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--teal); }
+  .intro { max-width: 78ch; color: #e5edf3; }
+  .print-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: inherit;
+    border: 1px solid #8495a5;
+    border-radius: 6px;
+    background: transparent;
+    padding: 10px 13px;
+    font: 600 13px/1.2 "Segoe UI", Arial, sans-serif;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .print-button svg { width: 16px; height: 16px; }
+  .print-button:hover { background: #29435a; border-color: var(--teal); }
+  .content { background: var(--white); border: 1px solid var(--line); border-top: 0; padding: 0 var(--pad) var(--section); }
+  .metrics { padding: 26px 0; border-bottom: 1px solid var(--line); }
+  .metrics h2 { font-size: 15px; margin-bottom: 14px; }
+  .metric-grid, .case-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .metric-grid { gap: 12px; }
+  .metric { padding: 16px 18px; background: var(--canvas); border: 1px solid var(--line); border-top: 3px solid var(--teal); border-radius: 4px; }
+  .metric strong {
+    display: block;
+    color: var(--navy);
+    font-size: clamp(34px, 4vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -.045em;
+    font-variant-numeric: lining-nums tabular-nums;
+    white-space: nowrap;
+  }
+  .metric p { margin-top: 8px; font-size: 14px; }
+  .section { margin-top: var(--section); }
+  .section h2 { margin-bottom: 16px; }
+  .case-grid { gap: 22px; }
+  .case { border-top: 1px solid var(--line); padding-top: 13px; }
+  .case-marker { display: flex; gap: 8px; align-items: center; color: var(--muted); font-size: 12px; font-weight: 700; margin-bottom: 9px; }
+  .case-marker svg { color: var(--navy); }
+  .case h3 { margin-bottom: 8px; }
+  .case strong { color: var(--navy); font-weight: 650; }
+  .skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 22px; }
+  .skills > div { padding: 12px 14px; background: var(--canvas); border-left: 2px solid var(--teal); }
+  .skills dt { color: var(--navy); font-weight: 700; margin-bottom: 3px; }
+  .skills dd { font-size: 14px; }
+  .history { display: grid; grid-template-columns: 1.25fr 1fr; gap: 22px; }
+  .history section { border-top: 1px solid var(--line); padding-top: 16px; }
+  .history h3 { margin-bottom: 4px; }
+  .history .meta { font-size: 13px; color: var(--muted); margin-top: 3px; }
+  .education { display: grid; gap: 10px; }
+  .education dt { font-weight: 650; }
+  .education dd { color: var(--muted); font-size: 14px; }
+  .contacts {
+    padding: 22px var(--pad) 24px;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 0 0 12px 12px;
+    border-bottom: 3px solid var(--gold);
+  }
+  .contacts h2 { color: inherit; font-size: 17px; margin-bottom: 10px; }
+  .contact-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px 18px; }
+  .contact-grid dt { color: #d8e5ed; font-size: 12px; }
+  .contact-grid dd { overflow-wrap: anywhere; }
+  .placeholder { color: #d8e5ed; font-size: 14px; }
+
+  @media screen and (max-width: 740px) {
+    .sheet { width: calc(100% - 24px); margin: 12px auto; }
+    .hero-top { display: grid; gap: 12px; }
+    .print-button { justify-self: start; }
+    .metric-grid, .case-grid, .skills, .history, .contact-grid { grid-template-columns: minmax(0, 1fr); }
+    .case-grid, .history { gap: 18px; }
+    .case-marker { margin-bottom: 6px; }
+  }
+
+  @page { size: A4 landscape; margin: 8mm; }
+  @media print {
+    * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    body { background: white; font-size: 10pt; line-height: 1.25; }
+    .sheet { width: 100%; margin: 0; }
+    .hero, .contacts { border-radius: 0; }
+    .hero { padding: 3.5mm 5mm; border-top-width: 2px; }
+    h1 { font-size: 27pt; }
+    .role { margin-top: 1mm; font-size: 15pt; }
+    .specialties { margin: 2mm 0 1.5mm; font-size: 9.5pt; }
+    .intro { max-width: none; }
+    .print-button { display: none !important; }
+    .content { padding: 0 5mm 3mm; }
+    .metrics { padding: 3mm 0; }
+    .metrics h2 { margin-bottom: 1.5mm; font-size: 10pt; }
+    .metric-grid, .case-grid { gap: 3mm; }
+    .metric { padding: 2mm 3mm; border-top-width: 2px; }
+    .metric strong { font-size: 23pt; }
+    .metric p { margin-top: 1mm; font-size: 9.5pt; }
+    .section { margin-top: 3mm; }
+    .section h2 { font-size: 12pt; margin-bottom: 1.5mm; }
+    .case { padding-top: 1.5mm; }
+    .case-marker { margin-bottom: .8mm; font-size: 8pt; }
+    .case-marker svg { width: 13px; height: 13px; }
+    .case h3, .history h3 { font-size: 10.5pt; margin-bottom: 1mm; }
+    p + p { margin-top: 1mm; }
+    .details { display: grid; grid-template-columns: 1.25fr 1fr; gap: 4mm; }
+    .skills { gap: 1.5mm; }
+    .skills > div { padding: 1.4mm 2mm; }
+    .skills dt { margin-bottom: .5mm; }
+    .skills dd, .education dd { font-size: 9.5pt; }
+    .history { display: block; }
+    .history section { border-top: 0; padding-top: 0; }
+    .history section + section { margin-top: 2mm; }
+    .history .meta { font-size: 9pt; margin-top: 0; }
+    .education { gap: .8mm; }
+    .contacts { padding: 2mm 5mm; border-bottom-width: 2px; }
+    .contacts h2 { font-size: 10pt; margin-bottom: .6mm; }
+    .contact-grid dt { font-size: 8.5pt; }
+    .placeholder { font-size: 9pt; }
+    .hero, .metrics, .case, .skills > div, .history section, .contacts { break-inside: avoid; }
+    h2, h3 { break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <h1>Андрей Попов</h1>
+        <p class="role">Финансовый руководитель</p>
+      </div>
+      <button class="print-button" type="button" id="print" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 17H3V9h18v8h-3M6 14h12v7H6zM17 12h1"/></svg>
+        Сохранить в PDF
+      </button>
+    </div>
+    <ul class="specialties" role="list" aria-label="Специализация">
+      <li>Корпоративные финансы</li>
+      <li>Проектное финансирование</li>
+      <li>Управленческий учёт</li>
+      <li>Автоматизация</li>
+    </ul>
+    <p class="intro">Выстраиваю финансовые системы для групп компаний: от привлечения финансирования и управления ликвидностью до внедрения управленческой отчётности и автоматизации бизнес-процессов. Практический опыт в строительстве и производстве, экспертиза в банковском финансировании.</p>
+  </header>
+
+  <div class="content">
+    <section class="metrics" aria-labelledby="metrics">
+      <h2 id="metrics">Результаты в цифрах</h2>
+      <div class="metric-grid">
+        <div class="metric"><strong>≈8 млрд ₽</strong><p>Организовано привлечение проектного финансирования по 214-ФЗ.</p></div>
+        <div class="metric"><strong>20+</strong><p>Сделок с банками. Максимальная сумма одной сделки — 1,4 млрд ₽.</p></div>
+        <div class="metric"><strong>20–30%</strong><p>Среднее снижение комиссий по кредитным сделкам благодаря переговорам с банками.</p></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="achievements">
+      <h2 id="achievements">Ключевые достижения</h2>
+      <div class="case-grid">
+        <article class="case">
+          <div class="case-marker" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5H3zm2 10h14M8 10v7m4-7v7m4-7v7M3 21h18"/></svg>01
+          </div>
+          <h3>Проектное финансирование</h3>
+          <p>Организовал финансирование строительных проектов по 214-ФЗ: подготовил финансовые модели, структурировал сделки, провёл переговоры с банками, контролировал ковенанты и целевое использование средств.</p>
+          <p><strong>Обеспечил вход в новый проект без вложения собственных средств.</strong></p>
+        </article>
+        <article class="case">
+          <div class="case-marker" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM4 9h16M10 9v11m4-7h3m-3 3h3M7 13h.01M7 16h.01"/></svg>02
+          </div>
+          <h3>Построение финансовой системы</h3>
+          <p><strong>Построил консолидированный управленческий учёт</strong> для строительного, производственного, проектного и управляющего направлений группы компаний.</p>
+          <p>Разработал единый справочник затрат, бюджеты CF / PL / BS и отчётность в разрезе проектов.</p>
+        </article>
+        <article class="case">
+          <div class="case-marker" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h6v6H4zM14 13h6v6h-6zM10 8h7v5M14 16H7v-5"/></svg>03
+          </div>
+          <h3>Автоматизация финансовых процессов</h3>
+          <p>Перевёл бюджетирование и казначейство из Google Sheets в 1С УНФ. <strong>Сократил время выполнения ручных операций с нескольких дней до нескольких часов.</strong></p>
+          <p>Внедрил автоматизированные рабочие места прораба, снабженца, сметчика и руководителя проекта.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="details">
+      <section class="section" aria-labelledby="competencies">
+        <h2 id="competencies">Профессиональные компетенции</h2>
+        <dl class="skills">
+          <div><dt>Финансовое управление</dt><dd>Бюджетирование и план-факт · Управленческий учёт CF / PL / BS · Консолидация отчётности · Управление ликвидностью · Финансовое моделирование</dd></div>
+          <div><dt>Банковское финансирование</dt><dd>Проектное финансирование по 214-ФЗ · Кредитование и лизинг · Контроль ковенант · Взаимодействие с кредиторами</dd></div>
+          <div><dt>Финансовый контроль</dt><dd>CAPEX / OPEX · Анализ себестоимости · Анализ рентабельности · Контроль финансовых рисков</dd></div>
+          <div><dt>Автоматизация и управление</dt><dd>1С УНФ · 1С Бухгалтерия · Google Sheets · Автоматизация казначейства · Управление командой до пяти человек</dd></div>
+        </dl>
+      </section>
+
+      <div class="section history">
+        <section aria-labelledby="experience">
+          <h2 id="experience">Профессиональный опыт</h2>
+          <h3>ГК «МЕРА» · Кемерово</h3>
+          <p><strong>Начальник финансового отдела</strong></p>
+          <p class="meta">Июнь 2020 — настоящее время · Строительство и недвижимость</p>
+          <p>Финансовое управление группой, проектное финансирование, управленческий учёт и бюджетирование, казначейство и финансовый контроль, автоматизация, руководство командой до пяти человек.</p>
+          <p>Также имеет опыт работы в банковском секторе.</p>
+        </section>
+        <section aria-labelledby="education">
+          <h2 id="education">Образование</h2>
+          <dl class="education">
+            <div><dt>Кемеровский государственный сельскохозяйственный институт</dt><dd>2011 · Финансы и кредит</dd></div>
+            <div><dt>ЦНТИ «ПРОГРЕСС»</dt><dd>2024 · Управленческий учёт и бюджетирование в строительстве</dd></div>
+          </dl>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <footer class="contacts" aria-labelledby="contacts">
+    <h2 id="contacts">Контакты</h2>
+    <!-- Замените заглушки в <dd> своими данными. Для ссылок используйте tel:, mailto: или https:. -->
+    <dl class="contact-grid">
+      <div><dt>Телефон</dt><dd class="placeholder">[Указать телефон]</dd></div>
+      <div><dt>Электронная почта</dt><dd class="placeholder">[Указать email]</dd></div>
+      <div><dt>Город</dt><dd class="placeholder">[Указать город]</dd></div>
+      <div><dt>Полное резюме</dt><dd class="placeholder">[Добавить ссылку]</dd></div>
+    </dl>
+  </footer>
+</main>
+<script>
+  const printButton = document.getElementById('print');
+  printButton.addEventListener('click', () => window.print());
+  printButton.hidden = false;
+</script>
+</body>
+</html>
